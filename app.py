@@ -3,6 +3,7 @@ import time
 import sys
 
 API_KEY = ""
+BOARD_ID = "9066374878"  
 COLUMN_TO_CHECK = "pulse_updated_mkqpfssf"
 COLUMN_TO_CLEAR = "color_mkt86f8b"
 TARGET_DATE = sys.argv[1] if len(sys.argv) > 1 else None
@@ -94,4 +95,4 @@ for item in items:
         date_only = date_col.split(" ")[0]
         if date_only == TARGET_DATE:
             clear_column_value(item["id"])
-            time.sleep(0.5)  # Respect rate limit
+            time.sleep(0.5)  
